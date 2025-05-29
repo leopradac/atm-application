@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
-import type { AccountType, Transaction } from '~/types/account'
+import type { AccountType, Balance, Transaction } from '~/types/account'
 
 
 export const useAccountsStore = defineStore('accounts', () => {
-    const balances = ref<Record<AccountType, number>>({
+    const balances = ref<Record<AccountType, Balance>>({
         checking: 0,
         savings: 0,
     })
