@@ -43,6 +43,7 @@ function handleTransfer() {
     try {
         transfer(form.from, form.to, form.amount)
         form.amount = 0
+        toast.add({ title: "Transfer successful" })
     } catch (err: unknown) {
         if (err instanceof Error) {
             toast.add({ title: err.message, color: 'error' })

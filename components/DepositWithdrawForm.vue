@@ -44,8 +44,10 @@ function handleSubmit() {
     try {
         if (form.type === 'deposit') {
             deposit(form.account, form.amount)
+            toast.add({ title: "Deposit successful" })
         } else {
             withdraw(form.account, form.amount)
+            toast.add({ title: "Withdraw successful" })
         }
         form.amount = 0
     } catch (err: unknown) {
