@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-
+  typescript: {
+    typeCheck: true,
+    strict: true,
+  },
+  ssr: false,
   modules: [
     '@nuxt/eslint',
     '@nuxt/icon',
@@ -11,5 +15,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
-  ]
+  ],
+  css: ['~/assets/css/main.css']
 })
